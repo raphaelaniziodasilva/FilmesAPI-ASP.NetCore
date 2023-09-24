@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FilmesAPI</name>
+    </assembly>
+    <members>
+        <member name="M:FilmesAPI.Controllers.FilmeController.AdicionaFilme(FilmesAPI.Data.Dtos.CreateFilmeDto)">
+            <summary>
+            Adicionar filmes ao banco de dados
+            </summary>
+            <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso a inserçao seja feita com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.FilmeController.ListarFilmes(System.Int32,System.Int32)">
+            <summary>
+            Listar todos os filmes adicionados ao banco de dados
+            </summary>
+            <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a lista feita com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.FilmeController.ListarFilmeId(System.Int32)">
+            <summary>
+            Listar um filme adicionado ao banco de dados
+            </summary>
+            <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso o filme seja listado com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.FilmeController.AtualizarFilme(System.Int32,FilmesAPI.Data.Dtos.UpdateFilmeDto)">
+            <summary>
+            Atualizar um filme no banco de dados
+            </summary>
+            <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso o filme seja atualizado com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.FilmeController.AtualizarCampoFilme(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{FilmesAPI.Data.Dtos.UpdateFilmeDto})">
+            <summary>
+            Atualizar um campo especifico do filme no banco de dados
+            </summary>
+            <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso o filme seja atualizado com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.FilmeController.DeleteFilme(System.Int32)">
+            <summary>
+            Deletar um filme especifico do banco de dados
+            </summary>
+            <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso o filme seja atualizado com sucesso</response>
+        </member>
+        <member name="T:FilmesAPI.Migrations.CriandoTabelaDeFilme">
+            <inheritdoc />
+        </member>
+        <member name="M:FilmesAPI.Migrations.CriandoTabelaDeFilme.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:FilmesAPI.Migrations.CriandoTabelaDeFilme.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:FilmesAPI.Migrations.CriandoTabelaDeFilme.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

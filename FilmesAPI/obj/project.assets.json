@@ -1792,11 +1792,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dtiDigital\\Videos\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj",
+      "projectUniqueName": "C:\\Users\\dtiDigital\\Videos\\Back-End\\FilmesAPI-ASP.NetCore\\FilmesAPI\\FilmesAPI.csproj",
       "projectName": "FilmesAPI",
-      "projectPath": "C:\\Users\\dtiDigital\\Videos\\FilmesAPI\\FilmesAPI\\FilmesAPI.csproj",
+      "projectPath": "C:\\Users\\dtiDigital\\Videos\\Back-End\\FilmesAPI-ASP.NetCore\\FilmesAPI\\FilmesAPI.csproj",
       "packagesPath": "C:\\Users\\dtiDigital\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dtiDigital\\Videos\\FilmesAPI\\FilmesAPI\\obj\\",
+      "outputPath": "C:\\Users\\dtiDigital\\Videos\\Back-End\\FilmesAPI-ASP.NetCore\\FilmesAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
