@@ -17,8 +17,11 @@ public class FilmeContext : DbContext {
 
     }
 
-    // vamos criar a propriedade de acesso aos filmes
-    public DbSet<Filme> Filmes { get; set; }
+    // vamos criar a propriedade de acesso aos filmes = a tabela do db
+    public DbSet<Filme> Filmes { get; set; } // tabela filmes
+    public DbSet<Cinema> Cinemas { get; set; } // tabela cinemas
+    public DbSet<Endereco> Enderecos { get; set; } // tabela enderecos
+    public DbSet<Sessao> Sessoes { get; set; } // tabela de sessoes
 }
 
 // agora vamos fazer a conexao com o db va para o arquivo appsettings.json

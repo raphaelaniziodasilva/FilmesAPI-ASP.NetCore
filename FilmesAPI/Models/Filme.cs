@@ -21,6 +21,9 @@ public class Filme {
     [Required(ErrorMessage = "O campo de duração é obrigatório")]
     [Range(80, 180, ErrorMessage = "A duraçao do filme deve ter entre 80 e 180 minutos")]
     public int Duracao { get; set; }
+
+    // terminando o relacionamento 1:n entre Sessao e Filme
+    public virtual ICollection<Sessao> Sessoes { get; set; }
 }
 
 /* vamos fazer a conexao com o banco de dados mysql

@@ -3,6 +3,7 @@
     "",
     "\\FilmesAPI",
     "\\FilmesAPI\\Controllers",
+    "\\FilmesAPI\\Models",
     "\\FilmesAPI\\Profiles",
     "\\FilmesAPI\\Properties"
   ],

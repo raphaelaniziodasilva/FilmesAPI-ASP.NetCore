@@ -50,18 +50,18 @@
             </summary>
             <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
             <returns>IActionResult</returns>
-            <response code="204">Caso o filme seja atualizado com sucesso</response>
+            <response code="204">Caso o filme seja deletado com sucesso</response>
         </member>
-        <member name="T:FilmesAPI.Migrations.CriandoTabelaDeFilme">
+        <member name="T:FilmesAPI.Migrations.createtables">
             <inheritdoc />
         </member>
-        <member name="M:FilmesAPI.Migrations.CriandoTabelaDeFilme.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:FilmesAPI.Migrations.createtables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:FilmesAPI.Migrations.CriandoTabelaDeFilme.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:FilmesAPI.Migrations.createtables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:FilmesAPI.Migrations.CriandoTabelaDeFilme.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+        <member name="M:FilmesAPI.Migrations.createtables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>

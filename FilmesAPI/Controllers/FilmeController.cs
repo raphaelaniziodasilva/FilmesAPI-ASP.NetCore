@@ -93,7 +93,7 @@ public class FilmeController : ControllerBase {
          * tirando a responsabilidade do models e
          * buscando todos os filmes que estao salvos no db
         */
-        return _mapper.Map<List<ReadFilmeDto>>(_context.Filmes.Skip(skip).Take(take));
+        return _mapper.Map<List<ReadFilmeDto>>(_context.Filmes.Skip(skip).Take(take).ToList());
 
         /* o usuario digitou ate 30 
          * https://localhost:7214/filme?take=30 */
