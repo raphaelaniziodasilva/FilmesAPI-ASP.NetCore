@@ -4,43 +4,124 @@
         <name>FilmesAPI</name>
     </assembly>
     <members>
+        <member name="M:FilmesAPI.Controllers.CinemaController.AdicionarCinema(FilmesAPI.Data.Dtos.CreateCinemaDto)">
+            <summary>
+            Adicionar cinema ao banco de dados
+            </summary>
+            <param name="cinemaDto">Campos necessários para a criaçao do cinema</param>
+            <returns>IActionResult</returns>
+            <response code="201">Cinema cadastrado com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.CinemaController.ListarCinemas">
+            <summary>
+            Listar todos os cinemas existentes no banco de dados
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="200">Lista ok</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.CinemaController.ListarCinemaId(System.Int32)">
+            <summary>
+            Listar um cinema existente do banco de dados
+            </summary>
+            <param name="id">Id do cinema</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso o filme seja listado com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.CinemaController.AtualizarCinema(System.Int32,FilmesAPI.Data.Dtos.UpdateCinemaDto)">
+            <summary>
+            Atualizar um cinema do banco de dados
+            </summary>
+            <param name="id">Id do cinema</param>
+            <param name="cinemaDto">Campos necessários para a atualizaçao do cinema</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso o cinema seja atualizado com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.CinemaController.DeletarCinema(System.Int32)">
+            <summary>
+            Deletar um cinema especifico do banco de dados
+            </summary>
+            <param name="id">Id do cinema</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso o filme seja deletado com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.EnderecoController.AdicionarEndereco(FilmesAPI.Data.Dtos.CreateEnderecoDto)">
+            <summary>
+            Adicionar endereço ao banco de dados
+            </summary>
+            <param name="enderecoDto">Campos necessários para a criaçao do endereço</param>
+            <returns>IActionResult</returns>
+            <response code="201">Endereço cadastrado com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.EnderecoController.ListarEnderecos">
+            <summary>
+            Listar todos os endereços existentes no banco de dados
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="200">Lista ok</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.EnderecoController.ListarEnderecoId(System.Int32)">
+            <summary>
+            Listar um endereço existente do banco de dados
+            </summary>
+            <param name="id">Id do endereço</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso o endereço seja listado com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.EnderecoController.AtualizarEndereco(System.Int32,FilmesAPI.Data.Dtos.UpdateEnderecoDto)">
+            <summary>
+            Atualizar um endereço do banco de dados
+            </summary>
+            <param name="id">Id do endereço</param>
+            <param name="enderecoDto">Campos necessários para a atualizaçao do endereço</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso o endereço seja atualizado com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.EnderecoController.DeletarEndereco(System.Int32)">
+            <summary>
+            Deletar um endereço especifico do banco de dados
+            </summary>
+            <param name="id">Id do endereço</param>
+            <returns>IActionResult</returns>
+            <response code="204">Caso o endereço seja deletado com sucesso</response>
+        </member>
         <member name="M:FilmesAPI.Controllers.FilmeController.AdicionaFilme(FilmesAPI.Data.Dtos.CreateFilmeDto)">
             <summary>
-            Adicionar filmes ao banco de dados
+            Adicionar filme ao banco de dados
             </summary>
-            <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
+            <param name="filmeDto">Campos necessários para a criaçao do filme</param>
             <returns>IActionResult</returns>
-            <response code="201">Caso a inserçao seja feita com sucesso</response>
+            <response code="201">Filme cadastrado com sucesso</response>
         </member>
         <member name="M:FilmesAPI.Controllers.FilmeController.ListarFilmes(System.Int32,System.Int32)">
             <summary>
-            Listar todos os filmes adicionados ao banco de dados
+            Listar todos os filmes existentes no banco de dados
             </summary>
-            <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
             <returns>IActionResult</returns>
-            <response code="200">Caso a lista feita com sucesso</response>
+            <response code="200">Lista ok</response>
         </member>
         <member name="M:FilmesAPI.Controllers.FilmeController.ListarFilmeId(System.Int32)">
             <summary>
-            Listar um filme adicionado ao banco de dados
+            Listar um filme existente do banco de dados
             </summary>
-            <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
+            <param name="id">Id do filme</param>
             <returns>IActionResult</returns>
             <response code="200">Caso o filme seja listado com sucesso</response>
         </member>
         <member name="M:FilmesAPI.Controllers.FilmeController.AtualizarFilme(System.Int32,FilmesAPI.Data.Dtos.UpdateFilmeDto)">
             <summary>
-            Atualizar um filme no banco de dados
+            Atualizar um filme do banco de dados
             </summary>
-            <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
+            <param name="id">Id do filme</param>
+            <param name="filmeDto">Campos necessários para a atualizaçao do filme</param>
             <returns>IActionResult</returns>
             <response code="204">Caso o filme seja atualizado com sucesso</response>
         </member>
         <member name="M:FilmesAPI.Controllers.FilmeController.AtualizarCampoFilme(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{FilmesAPI.Data.Dtos.UpdateFilmeDto})">
             <summary>
-            Atualizar um campo especifico do filme no banco de dados
+            Atualizar um filme do banco de dados
             </summary>
-            <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
+            <param name="id">Id do filme</param>
+            <param name="filmeDto">Campos necessários para a atualizaçao do filme</param>
             <returns>IActionResult</returns>
             <response code="204">Caso o filme seja atualizado com sucesso</response>
         </member>
@@ -48,9 +129,32 @@
             <summary>
             Deletar um filme especifico do banco de dados
             </summary>
-            <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
+            <param name="id">Id do filme</param>
             <returns>IActionResult</returns>
             <response code="204">Caso o filme seja deletado com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.SessaoController.AdicionaSessao(FilmesAPI.Data.Dtos.CreatSessaoDto)">
+            <summary>
+            Adicionar a sessao ao banco de dados
+            </summary>
+            <param name="sessaoDto">Campos necessários para a criaçao da sessao</param>
+            <returns>IActionResult</returns>
+            <response code="201">Sessao cadastrada com sucesso</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.SessaoController.ListarSessoes">
+            <summary>
+            Listar todas as sessoes existentes no banco de dados
+            </summary>
+            <returns>IActionResult</returns>
+            <response code="200">Lista ok</response>
+        </member>
+        <member name="M:FilmesAPI.Controllers.SessaoController.ListarSessoesPorId(System.Int32)">
+            <summary>
+            Listar uma sessao existente do banco de dados
+            </summary>
+            <param name="id">Id da sessao</param>
+            <returns>IActionResult</returns>
+            <response code="200">Caso a sessao seja listado com sucesso</response>
         </member>
         <member name="T:FilmesAPI.Migrations.createtables">
             <inheritdoc />

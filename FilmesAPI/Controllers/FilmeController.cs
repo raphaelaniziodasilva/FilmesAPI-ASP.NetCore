@@ -29,16 +29,15 @@ public class FilmeController : ControllerBase {
 
     // Documentaçao com swagger 
     /// <summary>
-    /// Adicionar filmes ao banco de dados
+    /// Adicionar filme ao banco de dados
     /// </summary>
-    /// <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
+    /// <param name="filmeDto">Campos necessários para a criaçao do filme</param>
     /// <returns>IActionResult</returns>
-    /// <response code="201">Caso a inserçao seja feita com sucesso</response>
+    /// <response code="201">Filme cadastrado com sucesso</response>
 
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-
 
     /* IActionResult e uma interface de resultado de uma açao que foi ececutada 
      * FromBody vai enviar as informaçoes do filme atraves do corpo da requisiçao
@@ -70,11 +69,10 @@ public class FilmeController : ControllerBase {
 
     // Documentaçao com swagger 
     /// <summary>
-    /// Listar todos os filmes adicionados ao banco de dados
+    /// Listar todos os filmes existentes no banco de dados
     /// </summary>
-    /// <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
     /// <returns>IActionResult</returns>
-    /// <response code="200">Caso a lista feita com sucesso</response>
+    /// <response code="200">Lista ok</response>
 
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -101,9 +99,9 @@ public class FilmeController : ControllerBase {
 
     // Documentaçao com swagger 
     /// <summary>
-    /// Listar um filme adicionado ao banco de dados
+    /// Listar um filme existente do banco de dados
     /// </summary>
-    /// <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
+    /// <param name="id">Id do filme</param>
     /// <returns>IActionResult</returns>
     /// <response code="200">Caso o filme seja listado com sucesso</response>
 
@@ -129,15 +127,16 @@ public class FilmeController : ControllerBase {
         // NotFound() e Ok() sao metodos da classe ControllerBase
     }
 
-    // Documentaçao com swagger - o metodo Put precisa de todo o filme para atualiza
+    // Documentaçao com swagger - o metodo Put precisa de todo os atributos do cinema para atualiza
     /// <summary>
-    /// Atualizar um filme no banco de dados
+    /// Atualizar um filme do banco de dados
     /// </summary>
-    /// <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
+    /// <param name="id">Id do filme</param>
+    /// <param name="filmeDto">Campos necessários para a atualizaçao do filme</param>
     /// <returns>IActionResult</returns>
     /// <response code="204">Caso o filme seja atualizado com sucesso</response>
 
-    [HttpPut("{id}")]
+    [HttpPut("{id}", Name = "AtualizarFilmeById")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
 
@@ -159,17 +158,17 @@ public class FilmeController : ControllerBase {
         return NoContent();
     }
 
-    // Documentaçao com swagger - metodo Patch precisa de um campo especifico para atualizar e nao o filme inteiro
+    // Documentaçao com swagger - o metodo Put precisa de todo os atributos do cinema para atualiza
     /// <summary>
-    /// Atualizar um campo especifico do filme no banco de dados
+    /// Atualizar um filme do banco de dados
     /// </summary>
-    /// <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
+    /// <param name="id">Id do filme</param>
+    /// <param name="filmeDto">Campos necessários para a atualizaçao do filme</param>
     /// <returns>IActionResult</returns>
     /// <response code="204">Caso o filme seja atualizado com sucesso</response>
 
-    [HttpPatch("{id}")]
+    [HttpPatch("{id}", Name = "AtualizarFilmeByIdPatch")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
 
     public IActionResult AtualizarCampoFilme(int id, JsonPatchDocument<UpdateFilmeDto> patch) {
@@ -207,11 +206,11 @@ public class FilmeController : ControllerBase {
     /// <summary>
     /// Deletar um filme especifico do banco de dados
     /// </summary>
-    /// <param name="filmeDto">Objeto com os campos necessários para a criaçao de um filme</param>
+    /// <param name="id">Id do filme</param>
     /// <returns>IActionResult</returns>
     /// <response code="204">Caso o filme seja deletado com sucesso</response>
 
-    [HttpDelete("{id}")]
+    [HttpDelete("{id}", Name = "DeletarFilmeById")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
 
